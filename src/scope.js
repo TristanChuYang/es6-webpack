@@ -13,7 +13,7 @@ console.table([
 ])
 
 const callbacks2 = []
-for (let j = 0; j <= 2; j++) {
+for (let j = 0; j <= 2; j++) { //let可以作为局部变量
     callbacks2[j] = function() {
         return j * 2
     }

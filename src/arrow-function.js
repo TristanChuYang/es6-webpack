@@ -21,7 +21,7 @@
     this.c = {
       a: 'a+',
       b: function() {
-        return this.a
+        return this.a  //在ES3,5中，谁调用的，this就指向谁，在这里是c调用的，所以this为c，所以c.a为a+
       }
     }
   }
@@ -36,7 +36,7 @@
     this.c = {
       a: 'a+',
       b: () => {
-        return this.a
+        return this.a  //在ES6中，this为定义时的指向，在定义b的时候，this指向的就是function中的this，及factory的实例
       }
     }
   }
